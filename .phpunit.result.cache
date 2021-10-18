@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"Mos\\Guess\\GuessCreateObjectTest::testCreateObjectNoArguments":0.043,"Mos\\Guess\\GuessCreateObjectTest::testCreateObjectFirstArgument":0.02,"Mos\\Guess\\GuessCreateObjectTest::testCreateObjectBothArguments":0.021}}
