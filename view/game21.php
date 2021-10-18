@@ -120,7 +120,7 @@ $test = new Dice(1);
             } else if ($_SESSION['computerPoints'] > $_SESSION['playerLastPoints']) {
                 echo "The computer won the game with the points <b>" . $_SESSION['computerPoints'] . "</b>";
                 $_SESSION['computerPoints'] = 0;
-                $_SESSION['computerRoundsWon'] += 1;
+                $_SESSION['computerRoundsWon'] += 1; 
                 $break = true;
             }
         }

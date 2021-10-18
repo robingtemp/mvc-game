@@ -30,6 +30,7 @@ class DiceHand
 {
     public $diceAmount = 0;
     public $diceArr = [];
+    public $diceArrSeparated = [];
 
     public function __construct($diceAmount) {
         $this->diceAmount = $diceAmount;
@@ -45,6 +46,7 @@ class DiceHand
         }
     }
 
+    // Show Dice sum for 21
     public function getDiceValues() {
         $tempVal = 0;
         foreach ($this->diceArr as &$dice) {
@@ -52,5 +54,14 @@ class DiceHand
         }
 
         return $tempVal;
+    }
+
+    // Show values in array for Yatzy
+    public function getDiceValuesSeparated() {
+        foreach ($this->diceArr as &$dice) {
+            array_push($this->diceArrSeparated, $dice->getCurrentValue());
+        }
+
+        return $this->diceArrSeparated;
     }
 }
