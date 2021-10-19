@@ -21,10 +21,10 @@ class Dice
     }
 }
 
-class GraphicalDice extends Dice
-{
+// class GraphicalDice extends Dice
+// {
 
-}
+// }
 
 class DiceHand 
 {
