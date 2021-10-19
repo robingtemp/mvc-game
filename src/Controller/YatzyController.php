@@ -35,8 +35,12 @@ class YatzyController
 
     public function process(): ResponseInterface
     {   
+        //TODO CHANGE SESSIONS TO VARIABLES?
+
         // Adding a throw
         $_SESSION['yatzy_current_throw'] += 1;
+        $_SESSION['yatzy_sum'] = $_SESSION['yatzy_sum'] ?? 0;
+        $_SESSION['yatzy_values'] = $_SESSION['yatzy_values'] ?? [];
 
         // Pushing currently posted values to values array
         if(isset($_POST['n0'])) {
@@ -71,10 +75,12 @@ class YatzyController
         }
 
         // Count points
-        if ($_SESSION['yatzy_current_throw'] === 3) {
-            foreach ($_SESSION['yatzy_values'] as $val) {
-                if ((int)$val === $_SESSION['yatzy_current_round']) {
-                    $_SESSION['yatzy_sum'] += (int)$val;
+        if (isset($_SESSION['yatzy_current_throw'])) {
+            if ($_SESSION['yatzy_current_throw'] === 3) {
+                foreach ($_SESSION['yatzy_values'] as $val) {
+                    if ((int)$val === $_SESSION['yatzy_current_round']) {
+                        $_SESSION['yatzy_sum'] += (int)$val;
+                    }
                 }
             }
         }

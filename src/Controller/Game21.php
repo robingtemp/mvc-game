@@ -37,13 +37,21 @@ class Game21
         // Check for actions
         if (isset($_POST['oneDice'])) {
             $_SESSION['dice'] = 1;
-        } else if (isset($_POST['twoDices'])) {
+        } 
+        
+        if (isset($_POST['twoDices'])) {
             $_SESSION['dice'] = 2;
-        } else if (isset($_POST['stay'])) {
+        } 
+        
+        if (isset($_POST['stay'])) {
             $_SESSION['turn'] = "computer";
-        } else if (isset($_POST['reset'])) {
+        } 
+        
+        if (isset($_POST['reset'])) {
             $_SESSION['turn'] = "player";
-        } else if (isset($_POST['resetFullGame'])) {
+        } 
+        
+        if (isset($_POST['resetFullGame'])) {
             $_SESSION['computerRoundsWon'] = 0;
             $_SESSION['playerRoundsWon'] = 0;
             $_SESSION['turn'] = "player";
