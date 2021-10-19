@@ -1,0 +1,2 @@
+C:\Users\robin\Desktop\dbwebb-kurser\mvc\me\game\src\Controller\YatzyController.php:36	The method process() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.
+C:\Users\robin\Desktop\dbwebb-kurser\mvc\me\game\src\Controller\YatzyController.php:36	The method process() has an NPath complexity of 2560. The configured NPath complexity threshold is 200.
